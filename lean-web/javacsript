@@ -1,0 +1,147 @@
+*các keyword
+-var: khai báo 1 biến
+-let: khai báo 1 biến khối
+-const:khai bảo 1 hằng số khối
+-if: đánh dấu một khối câu lệnh sẽ được thược thi theo 1 điều kiện
+-switch: đánh dấu một khối câu lệnh sẽ được thực thi các trường hợp khác nhau
+-for: đánh dấu một khối câu lệnh sẽ được thực thi trong 1 vòng lặp
+-function: khai bảo 1 hàm
+-return: thoát khỏi 1 chức năng
+-try: triển khai xử lý lỗi cho một khối câu lệnh
+-> dấu = trong js à lệnh gán nó không có giá trị đại số
+*một số chú ý khi khai báo biến:
+- tên phải bắt đầu  bắng kí tự (từ a đến z or A đến Z), dấu gạch dưới(_),dấu đô la($)trong js dấu $ được coi là 1 chữ cái
+- sau chữ là đến các số 
+- trong js phân biệt giữa chữ hoa và chữ thường ví dụ:x và X là các biến khác nhau
+* JS LET:
+- let không thể khai báo lại các biến:
++ nhưng var cs thể khai báo lại 
+VD: 
+var  X= "JOHN DOE";
+var  X=0;
+- các biến được xác định với let phải được khai báo trước khi sử dụng
+- các biến đưuojc xác định với let có phạm vi khối
++VD:
+{
+let X=2
+}
+- khai báo lại một biến bên trong 1 khối sẽ không khai báo lại biến bên ngoài khối
+vd:
+let X=10;
+{
+let x=2;
+}
+- với var chúng ta có thể khai báo lại  nhưng với let chúng ta không được phép khai báo lại chỉ được khai báo trong 1 khối or các khối
+-với var  chúng ta có thể sử dụng biến trước kho nó được khai báo
+vd: carname="volvo"
+    var carname;
+- nhưng vơi let thì sẽ dẫn đến ReferenceError
+            * JS CONST
+- giống như let ,const không thể khai báo lại 
+- khi khai báo với const  phải được gán với 1 giá trị
+- sử dụng const khi bạn khai báo :
++ 1 mảng mới 
++ một đối tượng mới 
++ một chức năng mới 
++ một RegExp mới
+- khôgn được phép khai báo lại một biến hiện có var hoặc let biến const trong cùng 1 phạm vi
+           *JS DATA TYPE
+- js đánh giá các biểu thức từ trái sang phải các trình tự khác nhau để tạo ra các kết quả khác
+- js là kiểu động nên chúng cí cùng 1 biến nhưng lại có kiểu dữ liệu khác nhau
+- với js strings là một chuỗi kí tự như "john doe" có thể sử dụng dấu ngoặc đơn hoặc kép js không phân biệt giữa 2 ngoặc này
+- array js được viết bằng dấu ngoặc vuông và các mục trong array đưuojc phân tách nhau băng dấu phẩy
+- objects js đưuojc viết bằng dấu ngoặc nhọn và cũng được ngăn cách nhau băng dấu phẩy
+- typeof js ta có thể sử dụng typeof để tìm ra kiểu dữ liệu của biên đấy
+- trong js ,một biến không có giá trị sẽ có giá trị là undefined
+- bất kì biến nào cũng có thể đưuojc làm trống bằng các thêm giá trị undefined
+* js function:
+- cú pháp của function:
++ một hàm được định nghĩa bằng function từ khóa, theo sau đó là tên, sau đó là dấu ngoặc đơn()
++ tên của hàm có thể chứa các chữ cái , số , dấu gạch dưới và dấu đô là( giống như cách đặt tên biến)
++ dấu ngoặc đơn có thê bao gồm tên tham số được phân tách bằng dấu phẩy
+- function return: là hàm để đưa ra kết quá của phép tính( tóan tử)
+           *js string:
+- với string được viết trong dấy ngoặc kép vì vậy nếu muốn trong văn bản có thêm nhoắc kép thì dùng\"......\"
+-> chúng ta không thể só sánh được object,nhưng chúng ta có thể so sách được các string với object (==) vì chúng cùng giá trị,chúng ta ko thể so sáng (===) vì toán tử có sự bình đẳng trong các kiểu dữ liệu
+- để biết độ dài của string chúng ta dùng hàm text.length
+- với slice() hàm náy để cắt chuỗi từ vị trí nào đến vị trí nào ( không bao gồm vị trí cuối cùng)
++ slice(7, 13): thì nó sẽ xuất ra string từ vị trí 7 đến hết vị trí 12
++ slice(7): thì sẽ lược bỏ đến hết vị trí 7 và xuất ra từ vị trí số 8
++ nếu mà âm thì sẽ tính ở cuối chuỗi
+- với substring() thì nó tương tự như slice nhưng ko biểu diễn được số âm
+- với substr() giống với slice nhưng khác biệt là số thứ 2 chỉ đôj dài của string xuất ra
++substr(7, 8): có nghĩa à từ vị trí thứ 7 xuất ra 8 kí tự
+- replace() là hàm thay thếmoojt giá trị nhất định  với 1 giá trị trong 1 chuỗi
+-> replace() thì method này có phân biệt chữ hoa và chữ thường nếu viếy hoa hết thì replace ko chạy
+- để phân biệt chữ hoa chữ thường thì sử dụng /i (note: biểu thức này không được viet trong dấu ngoặc đơn)
+- với method toLowerCase() sẽ chuyển đổi thành chữ thường
+- với method concat() sẽ nối các chuỗi lại với nhau
+- với trim() sẽ bỏ các khoảng trắng từ cả hai phía của chuỗi
+- với indexOf() sẽ trả về vị trí đầu tiên mà văn bản nằm trong() xuất hiện
+- nếu không tìm thấy văn bản thì cả indexOf() và lastIndexOf() đều trả về giá trọ là -1
+- string.search là method tìm kiếm 1 chuỗi cho một giá trị nhất định và trả về vị trí của biên đó
+- vơi string match() sẽ tìm kết quả khớp và trả lại 1 array
+- với includes() sẽ check và trả về giá trị true nếu như có
+- với startswith (.....,  ) nếu như bắt đầu bằng tư trong ngoặc thì trả về là true không thì trả về false 
++ nếu nhu thêm số sau thì bắt đầu từ vị trí đấy
+- endswith thì ngược lại với startswith
+- string.split(): sẽ cắt chuõi dài thành các chuỗi ngắn hơn
+-> note: js sẽ chạy bắt đầu từ 0,1,2,3,4,.....
+- trong js NaN chỉ ra rằng một số không hợp pháp và dùng isNaN để hiển thị có là số không hợp pháp hay ko
+-Infinity or -Infinity là giá trị js sẽ trả về giá trị lớn nhất có thể
+- toString() là phương pháp để xuất ra các số từ cơ số 2 đến cơ số 36
+-trong đó:
++cơ số 16 là hệ số lục phân
++cơ số 10 là số thập phân
++cơ số 8 là hệ số bát phân
++cơ số 2 là hệ số nhị phân
+- toFixed() là method trả về chuỗi, với số được làm tròn . một tham số xác định số kỹ tự đằng sau đấu thập phân
+vd:toFixed()là làm tròn đến số thập phân thứ 2
+             * JS ARRAY
+- array là một biến đặc biết ,có thể chứ nhiều giá trị cùng 1 lúc
+--> cú pháp:
+   const array_name=[item1,item2,...]
+note: chỉ có array là bắt đầu từ 0,1,2,3
+- các sử dung tên để truy cập các phàn tử : array_name.item1,....
+- dùng : array_name.length; để biết độ dài của array
+- dùng : array_name[số thứ tự:0,1,2,3,...] để hiện phần tử ở thứ tự đó ra
++note: với giá trị -1 là phần tử cuối cùng
+- dùng : array_name.push() để thêm phần tử vào trong array
+- toString() : đưa ra từng mảng 1 và được ngăn cách bằng dấu phẩy
+- join() giốn gnhuw toString nhưng có thể thêm dấu join (*)
+- pop() : cách xóa đi mảng cuối cùng 
++ dùng biến để đưa ra mảng vừa xóa đi ởvij trí cuối cùng vd: let x=array.pop()
+- push() : cách thêm vào ở vị trí cuối
++ dùng biến để đưa ra độ dài của mảng vd:let x=array.push("....") 
+- shift() : là cách để bỏ đi mảng đầu 
++ dùng biến để đưa ra độ dài của mảng đầu bị cắt đi vd:let x=array.shift()
+-unshift(): là cách để thêm một mảng vào đầu tiên
++ dùng array.shift() để đưa ra đọ dài của mảng thêm vào
+- dùng delete array[....] để xóa mảng 
+note : cái này xóa và sẽ để lại khoảng chống thay vì vậy hãy dùng pop() hoặc shift() hoặc splice()
+- với array.splice(...,...,"...","...") là cách thểm vào các mảng 
++ với ô đầu là số xác định vị trí mà các mảng mới được thêm vào
++ với ô thứ là xác định có bao nhiêu mảng cần đưuojc xóa đi
+- cũng có thể dùng splice để loại bảo các mảng mà ko để lại khoảng trống
++ array.splice(0,...) để xóa đi mảng mà không để lại khoảng trống ( trong đó ... là vị trí bị xóa đi)
+- với concat() tạo ra 1 mảng mới  bằng cách hợp nhất 2 mảng đã có
++ const name=name1.concat(name2,name3,...) với name1,2,3 là các mảng đã có sẵn
+- giống như string array cũng có alice() để cắt các mảng bên trong
++ slice(...,...) là cắt từ vị trí nào đến vị trí nào
+- khi ta gọi 1 array chúng ta có thể dùng 2 cách :
++document.getElemnetById("demo).innerHTML=array.name 
++document.getElemnetById("demo).innerHTML=array
+- với array.sort() sẽ sắp xếp một mảng theo thứ tự a-z
+- với array.reverse() sẽ sắp xếp 1 mảng ngược từ vịtris cuối lên đến vị trí đầu
+       * js date
+- để tạo ra date dùng
+     *new Date()
+-(...) bên trong là 7 số chỉ định và theo thứ tự bao gồm : năm, tháng, ngày , giờ ,phút, giấy và mili giây
+note: đối với tháng trong js chỉ có từ 0->11 ( 0 là tháng 1 và cứ thế tăng lên)
+-với giá trị toString sẽ  trả về giá trị date ngay lúc click chuột bao gồm năm tháng ngày giờ phút giây
+- với toUTCString trả về giá trị date theo chuỗi UTC
+- với getmonth() sẽ trả về giá trị của tháng đó ( để chính xác bạn lên cộng thêm 1 vì tháng trong js chạy từ0-11)
+để đầu ra là 1 chuỗi thì cần phải có 1 const days=["...",".."...]
+cái này cũng đúng với year,date,hours,....
+với getDay() là trả về giá trị các ngày trong tuần
+note: chỉ có date là 1-31 còn lại tất cả đều bắt đầu từ 0

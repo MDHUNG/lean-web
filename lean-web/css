@@ -1,0 +1,56 @@
+CSS
+- nền css:CSS backgrounds
+1 background-color: là mùa css
+2 báckground-image: là hình ảnh nền của  css 
+3 backgruond-repeat:dùng để lặp lại theo chiều ngang hoặc chiều dọc
++ với giá trị : repeat-x thì nền được lặp lại heo chiều ngang
++ với giá trị :no-repeat thì nền chỉ được lắp lại 1 lần
+4 backgruond-position : là cách để xác định vị trí hiển thị của nền
+5 backgruond-attachment:là cái để xác định giá nền sẽ di chuyển hay đứng yên khi cuộn chuột
++ với giá trị:fixed thì hình nền sẽ đứng yên và khôgn di chuyển khi cuọn chuột
++ với giá trị:scroll thì hình nền sẽ di chuyển hay là bị trôi đi khi cuộn chuột
+-->note: chúng ta có thế làm luôn trong 1 cái với lệnh backgruond
+....{
+     backgruond:1 2 3 4 5}
+- đường viền CSS: CSS borders
+cú pháp :....{ border-style:....}
+1 border
++ với dotted xác định một đường viền dạng chấm
++ với dashed xác định đường viền nét đứt
++ với solid xác định đường viền liền 
++ với double xác định đường viền kẽp
++ với groove Xác định đường viền có rãnh 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
++ với ridge Xác định đường viền 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
++ với inset Xác định đường viền in 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
++ với outset Xác định đường viền ban đầu 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
++ cới none xác định không có đường viền
++ với hidden xác định đường viền ẩn
+2 chiều rộng border:border width
++ với border- width được xác định bằng px, em ,pt,cm,...
+cú pháp
+    ....{border-width:.... ..... ..... ....}
+  được đánh theo thứ tự là trên ,phải ,dưới ,trái
+2 màu border:border-color
+màu của đường viền được hiển thị với cú pháp
+....{border-color:...}
+-margin CSS:
++ margin css được đánh theo trên->phải->dưới->trái
++ các giá trị được tính bằng các đơn vị chủ yếu là bằng px
++ khi có 3 giá trị như (margin:...,...,...;)thì:
+. cái thứ nhất là gi trị của margin-top
+. cái thứ 2 là của margin-right,margin-left
+. cái cuối là của margin-bottom
++ khi có 2 giá trị thì
+.cái thứ nhất là giá trị của margin-top,margin-bottom
+.cái thứ 2 là giá trị của mảgin-right,margin-left
++ khi có 1 cái thì cả 4 đều có giá trị đó
++ khi để giá trị auto thì sẽ căn giữ theo chiều ngang
+-padding CSS
++ với các trường hợp thì giống như margin và cũng được đánh giống như thế
++ width thì ta dùng box-sizing:border-box để giữu nguyên giá trị của width khi mà có thêm nhiều phần tử
+-CSS BOX MODEL
++ BOX MODEL tính từ ngoài vào trong thì thứ tự sẽ là:
+1 margin: là phần trắng từ ngoài vào đến vị trí đường viền
+2 border: là phần bao quanh padding
+3 padding: là phần trắng từ đg viền vào tới content
+4 content: phần nội dung
